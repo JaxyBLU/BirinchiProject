@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: "Montserrat", sans-serif;
+}
+.header{
+	padding: 15px;
+	background-color: #f1f1f1;
+
+	display: flex;
+	justify-content: space-between;
+}
+.logo{
+	height: 120px;
+	width: 247px;
+	float: left;
+}
+.slogan{
+	float: right;
+	margin: auto 0;
+	font-family: "Kaushan Script", cursive;
+	font-size: 40px;
+}
+.content{
+	display: flex;
+}
+.content::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.column{
+	background-color: #f1f1f1;
+	width: 33.3%;
+	padding: 15px;
+	float: left;
+}
+.mid_column{
+	background: url(mrsb_fon.jpg) no-repeat;
+	background-size: cover;
+}
+.branch::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/* Temporarilry style for column content */
+p{
+	text-align: justify;
+	font-size: 25px;
+}
+h1{
+	font-family: "Kaushan Script", cursive;
+}
+ul{
+	list-style-type: none;
+	display: inline;
+}
+.footer{
+	display: flex;
+	justify-content: space-between;
+
+	padding: 15px;
+	background-color: #f1f1f1;
+}
+.footerleft{
+	display: inline-block;
+	float: left;
+	width: 30%;
+}
+.footerright{
+	display: inline-block;
+	width: 30%;
+	float: right;
+}
+.footerlogo{
+	float: left;
+	margin: 0 auto;
+	height: 108px;
+	width: 111px;
+}
+.email, .phone, .fcb_l, .insta_l{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 20px;
+}
+.email:link, .phone:link, .fcb_l:link, .insta_l:link{
+	color: black;
+}
+.email:active, .phone:active, .fcb_l:visited, .insta_l:visited{
+	color: black;
+}
+.email:visited, phone:visited, .fcb_l:visited, .insta_l:visited{
+	color: black;
+}
+.fcb, .insta{
+	margin: auto 0;
+	height: 40px;
+	width: 40px;
+}

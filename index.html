@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width" charset="utf-8">
+	<title>This page</title>
+</head>
+<style>
+body{
+	counter-reset: h1counter;
+}
+h1.h1count::before{
+	counter-increment: h1counter;
+	content: "Section" counter(h1counter) ":";
+}
+.topic{
+	font-size: 28px;
+	font-weight: bold;
+	color: white;
+	background-color: tomato;
+	border: 2px solid black;
+}
+ol{
+	counter-reset: licount;
+	list-style-type: none;
+}
+li::before{
+	counter-increment: licount;
+	content: counters(licount,".")" ";
+}
+</style>
+<body>
+	<p class="topic">In this example I will show you how counters are used for different items.
+	First example demonstrates how counter is used to count and display number of h1 elements.</p>
+	<h1 class="h1count">This is item.</h1>
+	<h1 class="h1count">This is also an item.</h1>
+	<h1 class="h1count">This is an item too.</h1>
+	<h1 class="h1count">So total we must have 4 "h1" items.</h1>
+	<p class="topic">Let's make another example with two counters for displaying nested lists.</p>
+	<ol>
+		<li>item</li>
+		<li>item</li>
+			<ol>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+			</ol>
+		<li>item</li>
+		<li>item</li>
+		<ol>
+		<li>item</li>
+		<li>item</li>
+		<ol>
+			<li>item</li>
+			<li>item</li>
+		</ol>	
+		</ol>
+	</ol>
+</body>
+</html>
